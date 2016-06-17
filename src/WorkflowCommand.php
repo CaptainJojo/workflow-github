@@ -6,6 +6,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Yaml\Yaml;
+use Symfony\Component\Console\Question\ConfirmationQuestion;
 
 class WorkflowCommand extends Command
 {
@@ -45,6 +46,15 @@ class WorkflowCommand extends Command
             foreach ($result as $repos) {
                 if (!is_null($repo) && $repo !== $repos['name']) {
                     continue;
+                }
+
+                if (is_null($repo)) {
+                    $helper = $this->getHelper('question');
+                    $question = new ConfirmationQuestion('Faire la modification pour le projet ' . $repos['name'] .  ' ?', false);
+
+                    if (!$helper->ask($input, $output, $question)) {
+                        continue;
+                    }
                 }
 
                 $this->prepareLabels($client, $orga, $repos, $labelsConfig);
