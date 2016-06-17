@@ -1,0 +1,11 @@
+labels:
+    status/wip: 'ffdd88'
+    status/reviewable: '1d76db'
+    status/mergeable: '009800'
+    status/depend: 'd93f0b'
+    type/question: 'c7def8'
+    type/feat: '1abc9c'
+    type/fix: 'fbca04'
+    type/chore: '84b6eb'
+    type/refactor: '5319e7'
+    type/test: 'cccccc'
