@@ -1,28 +1,33 @@
 # Qu’est-ce qu’une bonne Pull Request (PR) ?
 
-- titre de la PR en **français**
-- format : label(category): titre
-- une description en  **français** de la PR (ce qu’elle doit faire)
+- le titre de la PR est en **français**
+- le titre de le PR est au format : label(categorie): titre
+- le titre de la PR est à **l’impératif** et en **minuscule** : “fixe un bug” et pas “Bug fixé”
+- la description de la PR est en **français**
 - le **cadrage/spécification technique** de la PR
-- **comment recetter ?** Connaître le cheminement de recette et les succès pour vérifier la PR
-- si la PR contient des **dépendances, il faut les indiquer (via une checklist)**
-- commit de message à **l’impératif** : “fixe un bug” et pas “bug fixé”
-- **commits sont en anglais** et suive le format label(category): title
+- le cahier de **recette** et les succès pour vérifier la PR
+- si la PR contient des **dépendances**, elles sont indiquées (via une checklist)
+
+# Les commits
+
+- les messages de commit sont **en anglais**
+- les messages de commit suivent le format label(category): title
+- les messages de commit sont à **l’impératif** et en **minuscule** : “fix the bug” et pas “Bug fixed”
 
 # Les labels de workflow
 
-3 labels destinés au workflow : status/wip, status/reviewable, satus/mergeable.
-- Une PR avec le label **status/wip** ne doit pas être mergée. Elle est ouverte aux CR.
-- Une PR avec le label **status/reviewable** est ouverte aux CR, et doit être marquée satus/mergeable si elle satisfait à 2 CR.
-- Une PR avec le label **satus/mergeable** doit être mergée.
-- Une PR sans label est reviewable mais pas mergeable (= status/wip, mais moins explicite...).
-- Une PR avec le label **status/depend** indique qu’il y a des dépendances externe (peut dépendre d’une autre PR, d’une personne, etc.)
+La PR a toujours un de ces labels :
+- **status/wip** : la PR ne doit pas être mergée. Elle est ouverte aux CR.
+- **status/reviewable** : la PR est ouverte aux CR. Elle doit être marquée status/mergeable si elle satisfait 2 CR.
+- **status/mergeable** : la PR doit être mergée.
+- **status/depend** : la PR indique qu’il y a des dépendances externes (peut dépendre d’une autre PR, d’une personne, etc.)
 
-# Les labels pour qualifier le code
+# Les labels de qualification
 
-- **type/question**: Quand on veut l’avis d’un pair pour un cadrage technique ou fonctionnel, ou lors d’un POC.
-- **type/feat**: Quand la PR a un impact pour les utilisateurs (ajout, suppression ou suppression d’une fonctionnalité).
-- **type/fix**: Quand la PR corrige un bug.
-- **type/chore**: Quand la PR n’a pas d’impact utilisateur (ajout de log, bump de release, modification d’outils internes par exemple).
-- **type/refactor**: Quand la PR ne fait que modifier le code mais n’ajoute pas de fonctionnalité ou ne corrige pas de bug.
-- **type/test**: Quand la PR ajoute des tests oubliés précédemment.
+La PR a toujours un de ces labels :
+- **type/question** : quand on veut l’avis d’un pair pour un cadrage technique ou fonctionnel, ou lors d’un POC.
+- **type/feat** : qand la PR a un impact pour les utilisateurs (ajout, suppression ou évolution d’une fonctionnalité).
+- **type/fix** : quand la PR corrige un bug.
+- **type/chore** : quand la PR n’a pas d’impact utilisateur (ajout de log, bump de release, modification d’outils internes par exemple).
+- **type/refactor** : quand la PR ne fait que modifier le code mais n’ajoute pas de fonctionnalité ou ne corrige pas de bug.
+- **type/test** : quand la PR ajoute des tests oubliés précédemment.
